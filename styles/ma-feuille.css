@@ -1,0 +1,172 @@
+/* Styles généraux */
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #2b2b2b;
+  color: #c7c79b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  background-color: #3b3b3b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Titres de sections */
+h2, h3 {
+  margin: 15px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Historique des bonus/malus */
+.bonus-malus-history {
+  margin-bottom: 20px;
+}
+
+.bonus-malus-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.bonus-malus-history th,
+.bonus-malus-history td {
+  border: 1px solid #6b6b6b;
+  padding: 8px;
+  text-align: center;
+  background-color: #4e4e4e;
+}
+
+.bonus-malus-history th {
+  background-color: #5c5c5c;
+  font-weight: bold;
+}
+
+.bonus-malus-history button {
+  background-color: #d9534f;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bonus-malus-history button:hover {
+  background-color: #c9302c;
+}
+
+/* Tableaux d'ajout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+table th,
+table td {
+  border: 1px solid #6b6b6b;
+  padding: 10px;
+  text-align: center;
+  background-color: #4e4e4e;
+}
+
+table th {
+  background-color: #5c5c5c;
+  font-weight: bold;
+}
+
+.add-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.add-row input,
+.add-row select {
+  flex: 1;
+  padding: 10px;
+  background-color: #3b3b3b;
+  border: 1px solid #6b6b6b;
+  color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.add-row button {
+  background-color: #5bc0de;
+  border: 1px solid #46b8da;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-row button:hover {
+  background-color: #31b0d5;
+}
+
+/* Onglets */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4e4e4e;
+  border-radius: 8px 8px 0 0;
+  color: #c7c79b;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: #6b6b6b;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #4e4e4e;
+  border-radius: 0 0 8px 8px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Boutons d'import/export */
+.file-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.file-controls button {
+  padding: 10px 20px;
+  background-color: #4e4e4e;
+  color: #fff;
+  border: 1px solid #a9a97a;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.file-controls button:hover {
+  background-color: #6b6b6b;
+}

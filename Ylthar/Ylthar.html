@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybride - Introduction</title>
+    <style>
+        /* Styles Globaux */
+        body {
+            background-color: #3b3b28;
+            color: #c7c79b;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 800px;
+            height: 90vh; /* Hauteur fixe pour activer le scroll si le contenu dépasse */
+            padding: 20px;
+            border: 2px solid #a9a97a;
+            background-color: #4e4e39;
+            position: relative;
+            overflow-y: auto; /* Activer le défilement vertical */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        .choices {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .choices button {
+            padding: 10px 20px;
+            border: 1px solid #a9a97a;
+            background-color: #2f2f1f;
+            color: #c7c79b;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            flex: 1;
+            margin: 5px;
+        }
+
+        .choices button:hover {
+            background-color: #63634a;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .navigation button {
+            padding: 10px 20px;
+            border: 1px solid #a9a97a;
+            background-color: #2f2f1f;
+            color: #c7c79b;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .navigation button:hover {
+            background-color: #63634a;
+        }
+
+        /* Effet de scintillement */
+        @keyframes flicker {
+            0%, 50%, 100% {
+                background-color: #4e4e39;
+            }
+            25%, 75% {
+                background-color: #5c5c45;
+            }
+        }
+
+        .flicker {
+            animation: flicker 0.3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Introduction</h1>
+        <p>
+            Un éclat de lumière. Une chaleur douce. Mon existence commence ainsi, dans une obscurité brisée par la lueur bienveillante d’un être invisible. Je ressens sans comprendre. Des bras me soulèvent, me bercent avec une tendresse qui dépasse les mots. Une mélodie étrange flotte dans l’air, un chant ancien tissé dans une langue que je ne connais pas, mais qui résonne comme une prière dédiée à ma venue.
+			La nuit s’étend autour de moi, mais je ne suis pas seul. Ce bercement, cette chaleur, c’est tout ce que je sais de la vie pour l’instant. Chaque mouvement m’enveloppe d’une sensation d’amour si réelle que je pourrais presque la toucher. Je m’endors dans cet univers de douceur, bercé par un rythme régulier, un battement mécanique quelque part au loin, comme un écho subtil.
+			Puis vient le réveil.
+			Mes yeux s’ouvrent sur un monde froid et étincelant. Mon berceau est d’acier, poli et immobile. Autour de moi, des visages. Jeunes, graves, ils murmurent des incantations dans une langue inconnue. Une vapeur d’encens monte dans les airs, enveloppant la pièce d’une aura mystique. Les voix s’élèvent en harmonie, comme un hymne qui semble porter un poids sacré.
+			Je ne comprends rien, mais je sens que je suis au centre de quelque chose de grand. Ces êtres, avec leurs mains jointes et leurs regards fixés sur moi, m’attendent. Je suis à la croisée des chemins, une page blanche sur laquelle tout reste à écrire.
+
+        </p>
+       
+        <p>
+            Premier choix :
+        </p>
+        <div class="choices">
+            <button id="male" onclick="saveChoice('Garçon')">Garçon</button>
+            <button id="female" onclick="saveChoice('Fille')">Fille</button>
+            <button id="random" onclick="saveChoice('Aléatoire')">Aléatoire</button>
+        </div>
+		<p>
+            Le reste est flou. Tout ce que je peux revoir, comme un écho brisé, c’est cette salle froide. Une salle où les prières résonnent à longueur de journée, portées par des voix graves et rythmées, comme un fleuve dont le courant ne s’interrompt jamais. Je ne comprends pas leurs mots, mais je sens qu’ils portent un poids, une intention ancienne et sacrée.
+			Puis, un jour, tout changea.
+			Une main ferme, mais étonnamment douce, me sortit de mon berceau d’acier. Un homme, grand et imposant, me portait dans ses bras. Son visage était à moitié couvert par un masque métallique, ses yeux brillaient d’une lueur étrange. Il murmura quelque chose, une langue mystérieuse:
+			"Lhaïra es miëma reneth, salmistren am yurane."
+			sa voix avait une résonance, un timbre rassurant, comme une promesse murmurée par l’univers lui-même.
+			Alors que je regardais par-dessus son épaule, je vis mon berceau d’acier disparaître. Lentement, il glissa dans une trappe sombre au sol, aspiré par les profondeurs du bâtiment. 
+			L’homme m’emmena hors de cette salle.
+			Lorsque nous franchîmes les portes massives, un flot de lumière m’aveugla. Le soleil. Pour la première fois, je vis le jour. La chaleur qui caressait ma peau était différente de celle des bras qui m’avaient bercé dans l’obscurité. C’était brut, intense, vivant.
+			Quand mes yeux s’habituèrent, le monde se révéla. Une ville immense s’étendait à perte de vue. 
+			Les immeubles, hauts et irréguliers, semblaient faits de plaques d’acier soudées à la hâte, mêlées à des fragments de pierre et de bois. Des câbles serpentant comme des racines reliaient les structures les unes aux autres, et des lumières clignotantes rythmaient la vie de ce paysage artificiel. Partout, des bruits de rouages, des chocs métalliques et des murmures électroniques remplissaient l’air.
+			Le ciel lui-même semblait voilé par un enchevêtrement de réseaux métalliques suspendus en hauteur, comme une toile d’araignée géante. Par moments, des éclats de lumière traversaient ces structures, donnant à la ville des reflets tantôt dorés, tantôt grisâtres.
+			L’homme qui me portait m’emmena dans un autre bâtiment, plus petit mais tout aussi étrange. Là, l’air était lourd, chargé de l’odeur de l’huile et du métal chauffé. Devant moi, une salle s’ouvrait sur des rangées de berceaux.
+			Ces berceaux étaient différents du mien. Faits de morceaux de métal recyclés, ils portaient les traces de leur ancienne vie : fragments d’armes rouillées, engrenages usés, outils brisés soudés ensemble pour former des cocons. Ici et là, des inscriptions effacées témoignaient de leur passé.
+			À l’intérieur de ces berceaux, d’autres enfants étaient allongés. Tous aussi petits que moi, tous plongés dans un sommeil calme. Aucun ne pleurait. Une sérénité étrange régnait dans cette salle, comme si ces nouveau-nés avaient été programmés pour le silence.
+			L’homme me posa dans l’un des berceaux, un assemblage hétéroclite de lames émoussées et de câbles tressés. Il murmura à nouveau :
+			"Salmistren am tuithre. Lythaí en am morannë."
+			Il me laissa là, parmi ces autres êtres comme moi.
+
+		<div class="navigation">
+            <button onclick="goBack()">Précédent</button>
+            <button onclick="goNext()">Suivant</button>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Enregistre les choix du joueur dans le localStorage
+         * @param {string} choice - Le choix du joueur (Garçon, Fille, Aléatoire)
+         */
+        function saveChoice(choice) {
+            localStorage.setItem('playerChoice', choice);
+            alert(`Choix enregistré : ${choice}`);
+        }
+
+        /**
+         * Fonction pour revenir à la page précédente
+         */
+        function goBack() {
+            alert("Retour à la page précédente");
+            // Code pour rediriger vers la page précédente (par exemple : window.location.href = 'pagePrecedente.html')
+        }
+
+        /**
+         * Fonction pour passer à la page suivante avec un effet de scintillement temporaire
+         */
+        
+               function goNext() {
+            const container = document.querySelector('.container');
+
+            // Ajout de l'effet de scintillement temporaire
+            container.classList.add('flicker');
+            setTimeout(() => {
+                container.classList.remove('flicker'); // Retire l'effet après 1 seconde
+                window.location.href = 'enfance.html'; // Redirige vers la page "enfance.html"
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+

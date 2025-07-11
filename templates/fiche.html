@@ -1,0 +1,157 @@
+<div class="sheet-container">
+  <header class="sheet-header">
+    <h1>{{name}}</h1>
+
+    <div class="race-selection">
+      <label for="race">Race:</label>
+      <select name="system.details.race" id="race">
+        <option value="Lamancien" {{#if (eq system.details.race "Lamancien")}}selected{{/if}}>Lamancien</option>
+        <option value="Ludzie" {{#if (eq system.details.race "Ludzie")}}selected{{/if}}>Ludzie</option>
+        <option value="Nekomata" {{#if (eq system.details.race "Nekomata")}}selected{{/if}}>Nekomata</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="sheet-body">
+    <form>
+      <div class="sheet-tabs">
+        <a class="item active" data-tab="combat">Combat</a>
+        <a class="item" data-tab="non-combat">Hors Combat</a>
+        <a class="item" data-tab="inventory">Inventaire</a>
+      </div>
+      <div class="sheet-content">
+        <!-- Onglet Combat -->
+        <div class="tab combat active" data-tab="combat">
+          <h2>Statistiques Principales</h2>
+          <!-- Statistiques Principales -->
+          <div class="stat">
+            <label for="force">Force (FOR):</label>
+            <input type="number" name="system.attributes.for.value" value="{{system.attributes.for.value}}" />
+          </div>
+          <div class="stat">
+            <label for="dexterite">Dextérité (DEX):</label>
+            <input type="number" name="system.attributes.dex.value" value="{{system.attributes.dex.value}}" />
+          </div>
+          <div class="stat">
+            <label for="constitution">Constitution (CON):</label>
+            <input type="number" name="system.attributes.con.value" value="{{system.attributes.con.value}}" />
+          </div>
+          <div class="stat">
+            <label for="intelligence">Intelligence (INT):</label>
+            <input type="number" name="system.attributes.int.value" value="{{system.attributes.int.value}}" />
+          </div>
+          <div class="stat">
+            <label for="sagesse">Sagesse (SAG):</label>
+            <input type="number" name="system.attributes.sag.value" value="{{system.attributes.sag.value}}" />
+          </div>
+          <div class="stat">
+            <label for="charisme">Charisme (CHA):</label>
+            <input type="number" name="system.attributes.cha.value" value="{{system.attributes.cha.value}}" />
+          </div>
+
+          <!-- Ajout des PV et du Slate -->
+          <div class="stat">
+            <label for="pv">Points de Vie (PV):</label>
+            <input type="number" name="system.attributes.hp.value" value="{{system.attributes.hp.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="slate">Slate:</label>
+            <input type="number" name="system.attributes.slate.value" value="{{system.attributes.slate.value}}" readonly />
+          </div>
+
+          <h2>Statistiques Optionnelles</h2>
+          <div class="stat">
+            <label for="perception">Perception (PER):</label>
+            <input type="number" name="system.attributes.per.value" value="{{system.attributes.per.value}}" />
+          </div>
+          <div class="stat">
+            <label for="chance-blocage">Chance de Blocage (CB):</label>
+            <input type="number" name="system.attributes.cb.value" value="{{system.attributes.cb.value}}" />
+          </div>
+        </div>
+
+        <!-- Onglet Hors Combat -->
+        <div class="tab non-combat" data-tab="non-combat">
+          <h2>Statistiques Hors Combat</h2>
+          <div class="stat">
+            <label for="weight">Poids:</label>
+            <input type="number" name="system.attributes.weight.value" value="{{system.attributes.weight.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="crafting">Artisanat:</label>
+            <input type="number" name="system.attributes.crafting.value" value="{{system.attributes.crafting.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="resistance">Résistance:</label>
+            <input type="number" name="system.attributes.resistance.value" value="{{system.attributes.resistance.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="tracking">Pistage/Traque:</label>
+            <input type="number" name="system.attributes.tracking.value" value="{{system.attributes.tracking.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="knowledge">Connaissance:</label>
+            <input type="number" name="system.attributes.knowledge.value" value="{{system.attributes.knowledge.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="gathering">Récolte:</label>
+            <input type="number" name="system.attributes.gathering.value" value="{{system.attributes.gathering.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="influence">Influence/Négociation:</label>
+            <input type="number" name="system.attributes.influence.value" value="{{system.attributes.influence.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="detection">Détection:</label>
+            <input type="number" name="system.attributes.detection.value" value="{{system.attributes.detection.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="acrobatics">Acrobatie:</label>
+            <input type="number" name="system.attributes.acrobatics.value" value="{{system.attributes.acrobatics.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="navigation">Navigation (Véhicules):</label>
+            <input type="number" name="system.attributes.navigation.value" value="{{system.attributes.navigation.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="alchemy">Alchimie:</label>
+            <input type="number" name="system.attributes.alchemy.value" value="{{system.attributes.alchemy.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="blacksmithing">Forgeron:</label>
+            <input type="number" name="system.attributes.blacksmithing.value" value="{{system.attributes.blacksmithing.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="scroll-writing">Écriture de Parchemins Magiques:</label>
+            <input type="number" name="system.attributes.scrollWriting.value" value="{{system.attributes.scrollWriting.value}}" readonly />
+          </div>
+          <div class="stat">
+            <label for="stealth">Discrétion:</label>
+            <input type="number" name="system.attributes.stealth.value" value="{{system.attributes.stealth.value}}" readonly />
+          </div>
+        </div>
+
+        <!-- Onglet Inventaire -->
+        <div class="tab inventory" data-tab="inventory">
+          <h2>Inventaire</h2>
+          <div class="inventory-list dropzone">
+            {{#each system.inventory as |item index|}}
+              <div class="inventory-item item" data-item-id="{{item._id}}" draggable="true">
+                <input type="text" name="system.inventory.{{index}}.name" value="{{item.name}}" placeholder="Nom de l'objet" />
+                <input type="number" name="system.inventory.{{index}}.weight" value="{{item.weight}}" placeholder="Poids" />
+                <button type="button" class="delete-item">Supprimer</button>
+              </div>
+            {{/each}}
+          </div>
+          <button type="button" class="add-item">Ajouter un Objet</button>
+          <div class="total-weight">
+            Poids total : {{system.totalWeight}} / {{system.attributes.weight.value}} kg
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>
+
+
+
